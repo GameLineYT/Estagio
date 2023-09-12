@@ -1,0 +1,30 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "construct": "tsc",
+    "start-servidor": "nodemon src/index.ts --exec ts-node",
+    "get-test": "curl http://localhost:3000",
+    "post-test": "curl -x POST -d 'id=1&nome=J.Daniel&descricao=Ultra&valor=123' http://localhost:3000/posts",
+    "put-test": "curl -x PUT -d 'id=1&nome=J.Daniel&descricao=Medium&valor=012' http://localhost:3000/posts",
+    "delete-test": "curl -X DELETE http://localhost:3000/post/1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
